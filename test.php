@@ -28,7 +28,7 @@ function findAdjacentNodes($nodeStart) {
 	neighbourHeuristic($adjacentNodes,$GLOBALS['nodeEnd']);
 	}
 
-function neighbourHeuristic($adjacentNodes, $nodeEnd) {
+function neighbourHeuristic($adjacentNodes, $nodeEnd ) {
 	echo '<pre>';
 	print_r($adjacentNodes);
 	}
