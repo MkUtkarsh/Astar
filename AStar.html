@@ -1,7 +1,27 @@
 <html>
 <head>
 <title>A* Algorithm in php </title>
-<script src = 'Astar.js'>
+
+<script>
+var count=1;
+function setColor(btn){
+	  if (count == 0) {
+            document.getElementById("01").style.backgroundColor="green";
+            count = 1;        
+        }
+        else {
+			prompt(btn);
+            document.getElementById("01").style.backgroundColor="red";
+            count = 0;
+        }
+}
+function yellow()
+
+{
+
+document.getElementById("00").style.backgroundColor="yellow"
+
+}
 </script>
 <style type="text/css">
 #block {
@@ -23,111 +43,111 @@
 <body>
 <div id = "block" >
 	<div>
-		<button class = 'buttons' id = 00 onclick="setColor( 00 , '#101010')" ;></button>
-		<button class = 'buttons' id = 01 ></button>
-		<button class = 'buttons' id = 02 ></button>
-		<button class = 'buttons' id = 03 ></button>
-		<button class = 'buttons' id = 04 ></button>
-		<button class = 'buttons' id = 05 ></button>
-		<button class = 'buttons' id = 06 ></button>
-		<button class = 'buttons' id = 07 ></button>
-		<button class = 'buttons' id = 08 ></button>
-		<button class = 'buttons' id = 09 ></button>
+		<button class = 'buttons' id = 0,0 onclick="setColor()";></button>
+		<button class = 'buttons' id = 0,1 onclick="setColor()" ;></button>
+		<button class = 'buttons' id = 0,2 onclick="setColor()";></button>
+		<button class = 'buttons' id = 0,3 onclick="setColor()";></button>
+		<button class = 'buttons' id = 0,4 onclick="setColor()";></button>
+		<button class = 'buttons' id = 0,5 onclick="setColor()";></button>
+		<button class = 'buttons' id = 0,6 onclick="setColor()";></button>
+		<button class = 'buttons' id = 0,7 onclick="setColor()";></button>
+		<button class = 'buttons' id = 0,8 onclick="setColor()";></button>
+		<button class = 'buttons' id = 0,9 onclick="setColor()";></button>
 	<div>
-		<button class = 'buttons' id = 10></button>
-		<button class = 'buttons' id = 11></button>
-		<button class = 'buttons' id = 12></button>
-		<button class = 'buttons' id = 13></button>
-		<button class = 'buttons' id = 14></button>
-		<button class = 'buttons' id = 15></button>
-		<button class = 'buttons' id = 16></button>
-		<button class = 'buttons' id = 17></button>
-		<button class = 'buttons' id = 18></button>
-		<button class = 'buttons' id = 19></button>
+		<button class = 'buttons' id = 1,0 onclick="setColor(10)" ;></button>
+		<button class = 'buttons' id = 1,1></button>
+		<button class = 'buttons' id = 1,2></button>
+		<button class = 'buttons' id = 1,3></button>
+		<button class = 'buttons' id = 1,4></button>
+		<button class = 'buttons' id = 1,5></button>
+		<button class = 'buttons' id = 1,6></button>
+		<button class = 'buttons' id = 1,7></button>
+		<button class = 'buttons' id = 1,8></button>
+		<button class = 'buttons' id = 1,9></button>
 	</div>
 	<div>
-		<button class = 'buttons' id = 30 ></button>
-		<button class = 'buttons' id = 31></button>
+		<button class = 'buttons' id = 3,0 ></button>
+		<button class = 'buttons' id = 3,1></button>
 		<button class = 'buttons' id = 32></button>
-		<button class = 'buttons' id = 33></button>
-		<button class = 'buttons' id = 34></button>
-		<button class = 'buttons' id = 35></button>
-		<button class = 'buttons' id = 36></button>
-		<button class = 'buttons' id = 37></button>
-		<button class = 'buttons' id = 38></button>
-		<button class = 'buttons' id = 39></button>
+		<button class = 'buttons' id = 3,3></button>
+		<button class = 'buttons' id = 3,4></button>
+		<button class = 'buttons' id = 3,5></button>
+		<button class = 'buttons' id = 3,6></button>
+		<button class = 'buttons' id = 3,7></button>
+		<button class = 'buttons' id = 3,8></button>
+		<button class = 'buttons' id = 3,9></button>
 	</div>
 	<div>
-		<button class = 'buttons' id = 40></button>
-		<button class = 'buttons' id = 41></button>
-		<button class = 'buttons' id = 42></button>
-		<button class = 'buttons' id = 43></button>
-		<button class = 'buttons' id = 44></button>
-		<button class = 'buttons' id = 45></button>
-		<button class = 'buttons' id = 46></button>
-		<button class = 'buttons' id = 47></button>
-		<button class = 'buttons' id = 48></button>
-		<button class = 'buttons' id = 49></button>
+		<button class = 'buttons' id = 4,0></button>
+		<button class = 'buttons' id = 4,1></button>
+		<button class = 'buttons' id = 4,2></button>
+		<button class = 'buttons' id = 4,3></button>
+		<button class = 'buttons' id = 4,4></button>
+		<button class = 'buttons' id = 4,5></button>
+		<button class = 'buttons' id = 4,6></button>
+		<button class = 'buttons' id = 4,7></button>
+		<button class = 'buttons' id = 4,8></button>
+		<button class = 'buttons' id = 4,9></button>
 	</div>
 	<div>
-		<button class = 'buttons' id = 50></button>
-		<button class = 'buttons' id = 51></button>
-		<button class = 'buttons' id = 52></button>
-		<button class = 'buttons' id = 53></button>
-		<button class = 'buttons' id = 54></button>
-		<button class = 'buttons' id = 55></button>
-		<button class = 'buttons' id = 56></button>
-		<button class = 'buttons' id = 57></button>
-		<button class = 'buttons' id = 58></button>
-		<button class = 'buttons' id = 59></button>
+		<button class = 'buttons' id = 5,0></button>
+		<button class = 'buttons' id = 5,1></button>
+		<button class = 'buttons' id = 5,2></button>
+		<button class = 'buttons' id = 5,3></button>
+		<button class = 'buttons' id = 5,4></button>
+		<button class = 'buttons' id = 5,5></button>
+		<button class = 'buttons' id = 5,6></button>
+		<button class = 'buttons' id = 5,7></button>
+		<button class = 'buttons' id = 5,8></button>
+		<button class = 'buttons' id = 5,9></button>
 	</div>
 	<div>
-		<button class = 'buttons' id = 60></button>
-		<button class = 'buttons' id = 61></button>
-		<button class = 'buttons' id = 62></button>
-		<button class = 'buttons' id = 63></button>
-		<button class = 'buttons' id = 64></button>
-		<button class = 'buttons' id = 65></button>
-		<button class = 'buttons' id = 66></button>
-		<button class = 'buttons' id = 67></button>
-		<button class = 'buttons' id = 68></button>
-		<button class = 'buttons' id = 69></button>
+		<button class = 'buttons' id = 6,0></button>
+		<button class = 'buttons' id = 6,1></button>
+		<button class = 'buttons' id = 6,2></button>
+		<button class = 'buttons' id = 6,3></button>
+		<button class = 'buttons' id = 6,4></button>
+		<button class = 'buttons' id = 6,5></button>
+		<button class = 'buttons' id = 6,6></button>
+		<button class = 'buttons' id = 6,7></button>
+		<button class = 'buttons' id = 6,8></button>
+		<button class = 'buttons' id = 6,9></button>
 	</div>
 	<div>
-		<button class = 'buttons' id = 70></button>
-		<button class = 'buttons' id = 71></button>
-		<button class = 'buttons' id = 72></button>
-		<button class = 'buttons' id = 73></button>
-		<button class = 'buttons' id = 74></button>
-		<button class = 'buttons' id = 75></button>
-		<button class = 'buttons' id = 76></button>
-		<button class = 'buttons' id = 77></button>
-		<button class = 'buttons' id = 78></button>
-		<button class = 'buttons' id = 79></button>
+		<button class = 'buttons' id = 7,0></button>
+		<button class = 'buttons' id = 7,1></button>
+		<button class = 'buttons' id = 7,2></button>
+		<button class = 'buttons' id = 7,3></button>
+		<button class = 'buttons' id = 7,4></button>
+		<button class = 'buttons' id = 7,5></button>
+		<button class = 'buttons' id = 7,6></button>
+		<button class = 'buttons' id = 7,7></button>
+		<button class = 'buttons' id = 7,8></button>
+		<button class = 'buttons' id = 7,9></button>
 	</div>
 	<div>
-		<button class = 'buttons' id = 80></button>
-		<button class = 'buttons' id = 81></button>
-		<button class = 'buttons' id = 82></button>
-		<button class = 'buttons' id = 83></button>
-		<button class = 'buttons' id = 84></button>
-		<button class = 'buttons' id = 85></button>
-		<button class = 'buttons' id = 86></button>
-		<button class = 'buttons' id = 87></button>
-		<button class = 'buttons' id = 88></button>
-		<button class = 'buttons' id = 89></button>
+		<button class = 'buttons' id = 8,0></button>
+		<button class = 'buttons' id = 8,1></button>
+		<button class = 'buttons' id = 8,2></button>
+		<button class = 'buttons' id = 8,3></button>
+		<button class = 'buttons' id = 8,4></button>
+		<button class = 'buttons' id = 8,5></button>
+		<button class = 'buttons' id = 8,6></button>
+		<button class = 'buttons' id = 8,7></button>
+		<button class = 'buttons' id = 8,8></button>
+		<button class = 'buttons' id = 8,9></button>
 	</div>
 	<div>
-		<button class = 'buttons' id = 90></button>
-		<button class = 'buttons' id = 91></button>
-		<button class = 'buttons' id = 92></button>
-		<button class = 'buttons' id = 93></button>
-		<button class = 'buttons' id = 94></button>
-		<button class = 'buttons' id = 95></button>
-		<button class = 'buttons' id = 96></button>
-		<button class = 'buttons' id = 97></button>
-		<button class = 'buttons' id = 98></button>
-		<button class = 'buttons' id = 99></button>
+		<button class = 'buttons' id = 9,0></button>
+		<button class = 'buttons' id = 9,1></button>
+		<button class = 'buttons' id = 9,2></button>
+		<button class = 'buttons' id = 9,3></button>
+		<button class = 'buttons' id = 9,4></button>
+		<button class = 'buttons' id = 9,5></button>
+		<button class = 'buttons' id = 9,6></button>
+		<button class = 'buttons' id = 9,7></button>
+		<button class = 'buttons' id = 9,8></button>
+		<button class = 'buttons' id = 9,9></button>
 	</div>
 	<div>
 		<button class = 'buttons' id = ></button>
